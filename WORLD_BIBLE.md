@@ -110,15 +110,15 @@ Nothing resets between episodes.
 
 ## Law IV — The Bonsai
 
-The Bonsai is home.
+Every world contains a Bonsai.
 
-It appears in every world.
+The protagonist's Bonsai quietly grows throughout life's journey, marking the passage of decades.
 
-It grows slowly over the decades.
+The Coffee Café contains its own house Bonsai, cared for by the diner.
 
-Its growth quietly tells the passage of time.
+Together they represent patience, growth, continuity, and life within every place.
 
-It is the Studio's living logo.
+The Bonsai is the Studio's living symbol.
 
 ---
 
