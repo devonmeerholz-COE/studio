@@ -115,13 +115,24 @@ def main(args=None):
         return 0
     if args == ["doctor"]:
         return doctor()
+    if args[0] == "visit":
+        from forge.visit import malformed_visit_usage, visit
+
+        if len(args) == 1:
+            return visit(None)
+        if len(args) == 2:
+            return visit(args[1])
+        return malformed_visit_usage()
 
     print(f"Unknown command: {' '.join(args)}")
-    print("Usage: python forge/main.py [doctor]")
+    print("Usage: python forge/main.py [doctor | visit WORLD_KEY]")
     return 2
 
 
 if __name__ == "__main__":
+    studio_root = str(STUDIO_ROOT)
+    if studio_root not in sys.path:
+        sys.path.insert(0, studio_root)
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     raise SystemExit(main())
