@@ -131,9 +131,20 @@ def main(args=None):
         if len(args) == 2:
             return inspect_world(args[1])
         return malformed_inspect_usage()
+    if args[0] == "critique":
+        from forge.critique_command import critique_file, malformed_critique_usage
+
+        if len(args) == 1:
+            return critique_file(None)
+        if len(args) == 2:
+            return critique_file(args[1])
+        return malformed_critique_usage()
 
     print(f"Unknown command: {' '.join(args)}")
-    print("Usage: python forge/main.py [doctor | visit WORLD_KEY | inspect WORLD_KEY]")
+    print(
+        "Usage: python forge/main.py "
+        "[doctor | visit WORLD_KEY | inspect WORLD_KEY | critique EVIDENCE_FILE]"
+    )
     return 2
 
 
