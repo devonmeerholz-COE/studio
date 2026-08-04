@@ -123,9 +123,17 @@ def main(args=None):
         if len(args) == 2:
             return visit(args[1])
         return malformed_visit_usage()
+    if args[0] == "inspect":
+        from forge.inspection import inspect_world, malformed_inspect_usage
+
+        if len(args) == 1:
+            return inspect_world(None)
+        if len(args) == 2:
+            return inspect_world(args[1])
+        return malformed_inspect_usage()
 
     print(f"Unknown command: {' '.join(args)}")
-    print("Usage: python forge/main.py [doctor | visit WORLD_KEY]")
+    print("Usage: python forge/main.py [doctor | visit WORLD_KEY | inspect WORLD_KEY]")
     return 2
 
 
