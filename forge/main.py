@@ -139,11 +139,29 @@ def main(args=None):
         if len(args) == 2:
             return critique_file(args[1])
         return malformed_critique_usage()
+    if args[0] == "compile":
+        from forge.compiler import compile_world, malformed_compile_usage
+
+        if len(args) == 1:
+            return compile_world(None)
+        if len(args) == 2:
+            return compile_world(args[1])
+        return malformed_compile_usage()
+    if args[0] == "render":
+        from forge.renderers.fal import malformed_render_usage, render_hacker_apartment
+
+        if len(args) != 2:
+            return malformed_render_usage()
+        if args[1] != "hacker-apartment":
+            print(f"Unknown world key: {args[1]}")
+            return malformed_render_usage()
+        return render_hacker_apartment()
 
     print(f"Unknown command: {' '.join(args)}")
     print(
         "Usage: python forge/main.py "
-        "[doctor | visit WORLD_KEY | inspect WORLD_KEY | critique EVIDENCE_FILE]"
+        "[doctor | visit WORLD_KEY | inspect WORLD_KEY | critique EVIDENCE_FILE | "
+        "compile WORLD_KEY | render WORLD_KEY]"
     )
     return 2
 

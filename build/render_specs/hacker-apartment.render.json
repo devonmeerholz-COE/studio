@@ -1,0 +1,57 @@
+{
+  "world": "hacker-apartment",
+  "camera": {
+    "movement": "static",
+    "framing": "wide",
+    "eye_level": true
+  },
+  "environment": {
+    "weather": "rain",
+    "time": "evening",
+    "city": "neo_tokyo"
+  },
+  "immutable": [
+    "empty_chair",
+    "camera",
+    "protagonist-bonsai",
+    "desk_position"
+  ],
+  "composition": {
+    "primary_focus": "desk",
+    "secondary_focus": "city"
+  },
+  "identity": [
+    "independent_builder",
+    "viewer_is_resident",
+    "resident_absent"
+  ],
+  "storytelling": [
+    "evidence_over_explanation",
+    "lived_in",
+    "quiet_persistence"
+  ],
+  "objects": [
+    {
+      "id": "protagonist-bonsai",
+      "category": "canon"
+    },
+    {
+      "id": "mech-mementos",
+      "category": "identity"
+    },
+    {
+      "id": "keyboard",
+      "category": "tool"
+    }
+  ],
+  "lighting": {
+    "interior": "warm",
+    "exterior": "cool",
+    "monitor": "glow"
+  },
+  "motion_candidates": [
+    "rain",
+    "steam",
+    "monitor_flicker"
+  ]
+}
